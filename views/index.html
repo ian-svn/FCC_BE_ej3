@@ -15,18 +15,29 @@
     <h1>URL Shortener Microservice</h1>
     <main>
       <section>
-        <form action="api/shorturl" method="POST">
+        <form action="/api/shorturl" method="POST">
           <fieldset>
             <legend>URL Shortener</legend>
             <label for="url_input">URL:</label>
-            <input id="url_input" type="text" name="url" placeholder="https://www.freecodecamp.org/" />
+            <input id="url_input" type="text" name="url" placeholder="https://www.freecodecamp.org/" required />
             <input type="submit" value="POST URL" />
           </fieldset>
         </form>
       </section>
+
+      <section>
+        <h2>Example Usage:</h2>
+        <p>POST <code>https://www.freecodecamp.org</code> to <code>/api/shorturl</code></p>
+        
+        <h2>Example Output:</h2>
+        <p><code>{"original_url":"https://www.freecodecamp.org","short_url":1}</code></p>
+        
+        <h2>Usage:</h2>
+        <p><code>GET /api/shorturl/1</code> will redirect to <code>https://www.freecodecamp.org</code></p>
+      </section>
     </main>
     <footer>
-      <p>By <a href="https://www.freecodecamp.org/">freeCodeCamp</a></p>
+      <p>By <a href="https://www.freecodecamp.org/">Ian Vila</a></p>
     </footer>
   </body>
 </html>
